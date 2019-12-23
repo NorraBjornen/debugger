@@ -1,8 +1,3 @@
-import tracer
-
-tracer.set_trace()
-
-
 def foo(a, b):
     a = 10
     b = 14
