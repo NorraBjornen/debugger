@@ -18,12 +18,11 @@ def dispatch(frame, event, arg):
     global dispatch_next, dispatch_current
     if dispatch_next:
         if dispatch_current:
-            print("dispatch")
             line = linecache.getline(
                 frame.f_code.co_filename,
                 frame.f_lineno
             )
-            print(line)
+            print("Следующая строка: " + line)
             cmd = True
             while cmd:
                 cmd = input('Введите имя переменной для вывода: ')
